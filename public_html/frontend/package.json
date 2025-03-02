@@ -10,7 +10,7 @@
       "webpack-build": "webpack --config webpack.config.js"
     },
     "dependencies": {
-      "@nuxt/ui": "^1.0.0", 
+      "@nuxt/ui": "npm:@nuxt/ui-edge@latest", 
       "nuxt": "^3.10.0"
     },
     "devDependencies": {

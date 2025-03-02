@@ -8,8 +8,8 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ~/projects/proj1/docker/nginx/default.conf:/etc/nginx/conf.d/default.conf  # Конфиг Nginx
-      - ~/projects/proj1/public_html:/var/www/html  # Сайт и API файлы из public_html
+      - /projects/proj1/docker/nginx/default.conf:/etc/nginx/conf.d/default.conf  # Конфиг Nginx
+      - /projects/proj1/public_html:/var/www/html  # Сайт и API файлы из public_html
     depends_on:
       - php
       - frontend
@@ -19,8 +19,8 @@ services:
     container_name: php
     restart: always
     volumes:
-      - ~/projects/proj1/public_html:/var/www/html  # Сайт и API файлы из public_html
-      - ~/projects/proj1/docker/php/php.ini:/usr/local/etc/php/php.ini  # Конфиг PHP
+      - /projects/proj1/public_html:/var/www/html  # Сайт и API файлы из public_html
+      - /projects/proj1/docker/php/php.ini:/usr/local/etc/php/php.ini  # Конфиг PHP
 
   mariadb:
     image: mariadb:latest
@@ -32,18 +32,18 @@ services:
       MYSQL_USER: bitrix
       MYSQL_PASSWORD: bitrix
     volumes:
-      - ~/projects/proj1/data/mariadb:/var/lib/mysql  # Указываем физическую папку на хосте для данных
+      - /projects/proj1/data/mariadb:/var/lib/mysql  # Указываем физическую папку на хосте для данных
     ports:
       - "3306:3306"
 
   frontend:
-    build: ~/projects/proj1/public_html/frontend
+    build: ./public_html/frontend
     container_name: nuxt
     restart: always
     ports:
       - "3000:3000"
     volumes:
-      - ~/projects/proj1/public_html/frontend:/app  # Связываем папку frontend с контейнером для Nuxt
+      - ./public_html/frontend:/app  # Связываем папку frontend с контейнером для Nuxt
     environment:
       - NUXT_HOST=0.0.0.0
       - NUXT_PORT=3000

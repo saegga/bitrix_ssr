@@ -1,0 +1,24 @@
+{
+    "name": "frontend",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "dev": "nuxt dev",
+      "build": "nuxt build",
+      "start": "nuxt start",
+      "generate": "nuxt generate",
+      "webpack-build": "webpack --config webpack.config.js"
+    },
+    "dependencies": {
+      "@nuxt/ui": "npm:@nuxt/ui-edge@latest", 
+      "nuxt": "^3.10.0"
+    },
+    "devDependencies": {
+      "webpack": "^5.88.0",
+      "webpack-cli": "^5.1.4",
+      "vue-loader": "^17.1.1",
+      "css-loader": "^6.8.1",
+      "style-loader": "^3.3.3"
+    }
+}
+  

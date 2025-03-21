@@ -1,1 +1,12 @@
+.DS_Store
 data/
+public_html/frontend/node_modules/
+public_html/frontend/.nuxt/
+public_html/frontend/.output/
+public_html/frontend/.data/
+public_html/frontend/.nitro/
+public_html/frontend/.cache/
+public_html/frontend/.output/
+public_html/frontend/.nuxt/
+public_html/frontend/.output/
+

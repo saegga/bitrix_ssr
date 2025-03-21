@@ -47,7 +47,7 @@ services:
     environment:
       - NUXT_HOST=0.0.0.0
       - NUXT_PORT=3000
-    command: ["sh", "-c", "npm run build && npm run start"]  # Запуск Nuxt в режиме SSR ["npm", "run", "start"]
+    #command: ["npm", "run", "start"]  # Запуск Nuxt в режиме SSR ["npm", "run", "start"] "sh", "-c", "npm run build && npm run start"
 
 volumes:
   mariadb_data: {} # Тома не требуется, так как мы используем bind mount для данных MariaDB docker run -it proj1_frontend:latest sh

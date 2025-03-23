@@ -30,7 +30,11 @@ export default defineNuxtConfig({
             changeOrigin: true,
           },
           '/bitrix': {
-            target: 'http://nginx', // API Bitrix через Nginx
+            target: 'http://nginx',
+            changeOrigin: true,
+          },
+          '/index.php': {
+            target: 'http://nginx',
             changeOrigin: true,
           }
         },

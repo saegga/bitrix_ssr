@@ -19,7 +19,7 @@ services:
     container_name: php
     restart: always
     volumes:
-      - ./public_html:/var/www/html  # Сайт и API файлы из public_html
+      - ./public_html/backend:/var/www/html/backend  # Сайт и API файлы из public_html
       - ./docker/php/php.ini:/usr/local/etc/php/php.ini  # Конфиг PHP
 
   mariadb:

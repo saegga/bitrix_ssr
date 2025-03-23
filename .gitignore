@@ -10,3 +10,13 @@ public_html/frontend/.output/
 public_html/frontend/.nuxt/
 public_html/frontend/.output/
 
+public_html/backend/bitrix/
+public_html/backend/upload/
+public_html/backend/bxtest/
+public_html/backend/readme.html
+public_html/backend/install.config
+
+public_html/backend/.access.php
+public_html/backend/.htaccess
+public_html/backend/favicon.ico
+

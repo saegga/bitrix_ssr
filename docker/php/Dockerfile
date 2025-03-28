@@ -19,16 +19,17 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Копируем php.ini
 COPY php.ini /usr/local/etc/php/
 
+RUN chmod -R 777 /tmp
 # Настроим права на директории
 
-RUN usermod -u 1000 www-data
+#RUN usermod -u 1000 www-data
 
-RUN chown -R www-data:www-data /var/www/html
-RUN chown -R www-data:www-data /var/www/html/backend
-RUN chown -R www-data:www-data backend
+#RUN chown -R www-data:www-data /var/www/html
+#RUN chown -R www-data:www-data /var/www/html/backend
+#RUN chown -R www-data:www-data backend
 
-RUN chmod -R 755 /var/www/html/backend
-RUN chmod -R 644 /var/www/html/backend/*.php
+#RUN chmod -R 755 /var/www/html/backend
+#RUN chmod -R 644 /var/www/html/backend/*.php
 
 EXPOSE 9000
 

@@ -33,5 +33,4 @@ public_html/backend/search/
 public_html/backend/services/
 public_html/backend/404.php
 public_html/backend/urlrewrite.php
-public_html/backend/index.php
 public_html/backend/.*.php

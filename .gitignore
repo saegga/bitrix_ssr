@@ -1,5 +1,7 @@
 .DS_Store
 data/
+.db/
+
 public_html/frontend/node_modules/
 public_html/frontend/.nuxt/
 public_html/frontend/.output/
@@ -20,3 +22,16 @@ public_html/backend/.access.php
 public_html/backend/.htaccess
 public_html/backend/favicon.ico
 
+/* pages bitrix */
+public_html/backend/company/
+public_html/backend/contacts/
+public_html/backend/include/
+public_html/backend/login/
+public_html/backend/news/
+public_html/backend/products/
+public_html/backend/search/
+public_html/backend/services/
+public_html/backend/404.php
+public_html/backend/urlrewrite.php
+public_html/backend/index.php
+public_html/backend/.*.php

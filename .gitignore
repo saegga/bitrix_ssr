@@ -34,3 +34,5 @@ public_html/backend/services/
 public_html/backend/404.php
 public_html/backend/urlrewrite.php
 public_html/backend/.*.php
+
+test.php

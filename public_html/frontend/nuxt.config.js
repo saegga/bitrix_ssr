@@ -2,7 +2,8 @@ export default defineNuxtConfig({
     ssr: true, // Включаем SSR
     runtimeConfig: {
       public: {
-        apiBase: process.env.API_BASE || '/backend/api', // API путь
+        apiBase: '/backend/api/', // API путь
+        domain: 'http://localhost:3000'
       },
     },
     app: {
@@ -11,9 +12,9 @@ export default defineNuxtConfig({
         meta: [
           { name: 'description', content: 'Сайт на Nuxt 3 с SSR и Bitrix API' },
         ],
-        link: [
+ /*       link: [
           { rel: 'stylesheet', href: '/assets/css/main.css' },
-        ],
+        ],*/
       },
     },
     css: [
@@ -25,17 +26,20 @@ export default defineNuxtConfig({
     vite: {
       server: {
         proxy: {
-          '/backend': {
+          '/backend/api/': {
             target: 'http://nginx', // API Bitrix через Nginx
             changeOrigin: true,
+            secure: false,
           },
           '/bitrix': {
             target: 'http://nginx',
             changeOrigin: true,
+            secure: false,
           },
           '/index.php': {
             target: 'http://nginx',
             changeOrigin: true,
+            secure: false,
           }
         },
       },

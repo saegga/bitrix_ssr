@@ -3,8 +3,11 @@
 <h1>Hello world</h1>
 </div>
 </template>
-<script>
-export default {
-    name: 'HomePage',
-}
+<script setup>
+
+
+const config = useRuntimeConfig();
+console.log(config)
+const {data, pending, error} = await useFetch(config.public.domain + `/backend/api/test.php`);
+console.log(data)
 </script>

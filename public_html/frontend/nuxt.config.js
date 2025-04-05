@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     runtimeConfig: {
       public: {
         apiBase: '/backend/api/', // API путь
-        domain: 'http://localhost:3000'
+        domain: 'http://dev-test.ru:3000'
       },
     },
     app: {
@@ -25,22 +25,32 @@ export default defineNuxtConfig({
     },
     vite: {
       server: {
+        host: '0.0.0.0',
+        port: '3000',
         proxy: {
           '/backend/api/': {
             target: 'http://nginx', // API Bitrix через Nginx
             changeOrigin: true,
             secure: false,
+            header: {
+              host: 'localhost'
+            }
           },
-          '/bitrix': {
+/*          '/bitrix': {
             target: 'http://nginx',
             changeOrigin: true,
             secure: false,
+            header: {
+              host: 'local            }
           },
           '/index.php': {
             target: 'http://nginx',
             changeOrigin: true,
             secure: false,
-          }
+            header: {
+              host: 'localhost'
+            }
+          }*/
         },
       },
     },

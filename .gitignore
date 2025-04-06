@@ -36,3 +36,4 @@ public_html/backend/urlrewrite.php
 public_html/backend/.*.php
 
 test.php
+*.env

@@ -2,6 +2,9 @@ SHELL := /bin/bash
 
 .DEFAULT_GOAL := help
 
+start: ## start first time with build
+	./run.sh build
+	./run.sh up -d
 up: ## up containers
 	./run.sh up -d
 
@@ -28,6 +31,7 @@ rebuild: ## rebuild and start containers
 ps: ## ps containers active
 	./run.sh ps
 
+# make start
 # make up
 # make down
 # make build

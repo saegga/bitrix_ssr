@@ -5,8 +5,7 @@ some fucking shit
 auto
 
 1. chmod +x run.sh
-2. make build
-3. make up -d
+2. make start
 4. ?????
 5. PROFIT!!!
 
